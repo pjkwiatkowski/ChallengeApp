@@ -1,33 +1,19 @@
-﻿var name = "Marek";
-bool male = true;
-var age = 23;
-var eyesColor = "blue";
+﻿Console.Write("Wpisz liczbę i naciśnij ENTER: ");
+var number = Console.ReadLine();
 
-if (male == false && age < 30)
+string numberInString = number.ToString();
+char[] letters = numberInString.ToCharArray();
+
+for (int i = 0; i < 10; i++)
+
 {
-    Console.WriteLine("Kobieta poniżej 30 lat");
-}
-else if ( name == "Ewa" && age == 30)
-{
-    Console.WriteLine("Ewa, lat 33");
-}
-else if (male && age < 18)
-{
-    Console.WriteLine("Niepełnoletni Mężczyzna");
-}
-else if (male == false && age >= 30)
-{
-    Console.WriteLine("Kobieta minimum 30 lat");
-}
-else if (male == false && eyesColor == "blue")
-{
-    Console.WriteLine("Kobieta o niebieskich oczach");
-}
-else if (male && age >= 20 && age <= 25)
-{
-    Console.WriteLine("Mężczyzna w wieku 20-25 lat");
-}
-else
-{
-    Console.WriteLine("Nie zweryfikowano");
-}
+    int count = 0;
+    foreach (char letter in letters)
+    {
+        if (i == char.GetNumericValue(letter))
+        {
+            count++;
+        }
+    }
+        Console.WriteLine(i + " => " + count);
+} 
