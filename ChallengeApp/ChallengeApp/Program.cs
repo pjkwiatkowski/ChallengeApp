@@ -1,8 +1,6 @@
 ﻿Console.Write("Wpisz liczbę i naciśnij ENTER: ");
-var number = Console.ReadLine();
-
-string numberInString = number.ToString();
-char[] letters = numberInString.ToCharArray();
+string number = Console.ReadLine();
+char[] letters = number.ToCharArray();
 
 for (int i = 0; i < 10; i++)
 
